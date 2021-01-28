@@ -1,0 +1,10 @@
+<h1> This is an order form </h1>
+
+    <form action='/orders/<% @order.id %>' method="POST">
+        <input id="hidden" type="hidden" name="_method" value="patch">
+        Address: <input type=text name="address" value="<%= @order.address %>">
+        Item: <input type=text name="item" value="<%= @order.item %>" >
+        Item price: <input type=number value="<%= @order.item_price %>" name="item_price">
+        Total: <input type=number value="<%= @order.total %>" name="total">
+        <input type=submit value="Submit Order">
+    <form>
